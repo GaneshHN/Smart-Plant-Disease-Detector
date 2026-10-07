@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgroAI – Smart Plant Disease Detector</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>AgroAI</h1>
+            <p>Smart Plant Disease Detector for farmers and students.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="upload-panel">
+            <h2>Upload a leaf image</h2>
+            <form id="uploadForm">
+                <input type="file" id="leafImage" name="leafImage" accept="image/*" required />
+                <button type="submit">Analyze Disease</button>
+            </form>
+            <div id="previewContainer" class="preview hidden">
+                <img id="previewImage" alt="Leaf preview" />
+            </div>
+        </section>
+
+        <section class="result-panel hidden" id="resultPanel">
+            <h2>Diagnosis</h2>
+            <p><strong>Disease:</strong> <span id="diseaseLabel"></span></p>
+            <p><strong>Confidence:</strong> <span id="confidenceLabel"></span></p>
+            <p><strong>Treatment Advice:</strong></p>
+            <p id="treatmentAdvice"></p>
+            <p class="note" id="fallbackMessage"></p>
+        </section>
+    </main>
+
+    <script src="/static/js/app.js"></script>
+</body>
+
+</html>

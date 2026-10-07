@@ -1,0 +1,108 @@
+:root {
+    --bg: #f5fbf8;
+    --surface: #ffffff;
+    --text: #1c2b2a;
+    --muted: #5f6d6b;
+    --accent: #2f9d74;
+    --accent-dark: #266f55;
+    --border: #dce7e2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+}
+
+.hero {
+    background: linear-gradient(135deg, #2f9d74 0%, #66c09f 100%);
+    color: white;
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.hero p {
+    margin: 1rem auto 0;
+    max-width: 34rem;
+    font-size: 1.1rem;
+}
+
+.container {
+    width: min(1080px, 100% - 2rem);
+    margin: -2rem auto 2rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.upload-panel,
+.result-panel {
+    background: var(--surface);
+    padding: 1.75rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 50px rgba(45, 93, 83, 0.08);
+}
+
+.upload-panel h2,
+.result-panel h2 {
+    margin-top: 0;
+}
+
+#leafImage {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 0.95rem 1.3rem;
+    border-radius: 0.8rem;
+    background: var(--accent);
+    color: white;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: var(--accent-dark);
+}
+
+.preview {
+    margin-top: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    overflow: hidden;
+    max-width: 360px;
+}
+
+.preview img {
+    width: 100%;
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.note {
+    color: var(--muted);
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
